@@ -21,18 +21,11 @@ class LinterWriteGood extends Linter
 
   # A regex pattern used to extract information from the executable's output.
   regex:
-    '=+\n' +
-    '.*\n' +
-    '.*\n' +
-    '(?<message>.+?) on line (?<line>\\d+) .*'
-
-    # at column (?<col>\\d+)'
+    '(?<message>.+?) on line (?<line>\\d+) at column (?<col>\\d+)\n?'
 
     # '<issue line="(?<line>\\d+)"' +
     # # '.+?lineEnd="\\d+"' +
     # '.+?reason="\\[((?<error>error)|(?<warning>warn))\\] (?<message>.+?)"'
-
-  regexFlags: 's'
 
   isNodeExecutable: yes
 
