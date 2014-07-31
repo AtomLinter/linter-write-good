@@ -1,0 +1,16 @@
+{
+  "name": "linter-write-good",
+  "main": "./lib/init",
+  "linter-package": true,
+  "activationEvents": [],
+  "version": "0.0.0",
+  "description": "",
+  "repository": "https://github.com/gepoch/linter-write-good",
+  "license": "MIT",
+  "engines": {
+    "atom": ">0.50.0"
+  },
+  "dependencies": {
+    "write-good": "~0.7.0"
+  }
+}
