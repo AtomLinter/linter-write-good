@@ -4,7 +4,7 @@
   "linter-package": true,
   "activationEvents": [],
   "version": "0.1.1",
-  "description": "",
+  "description": "A Linter interface for the [write-good](https://github.com/btford/write-good) library.",
   "repository": "https://github.com/gepoch/linter-write-good",
   "license": "MIT",
   "engines": {
