@@ -11,6 +11,7 @@
     "atom": ">0.50.0"
   },
   "dependencies": {
-    "write-good": "~0.7.0"
+    "write-good": "~0.7.0",
+    "xregexp": "~2.0.0"
   }
 }

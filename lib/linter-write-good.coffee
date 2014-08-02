@@ -1,6 +1,7 @@
 linterPath = atom.packages.getLoadedPackage('linter').path
 Linter = require "#{linterPath}/lib/linter"
 findFile = require "#{linterPath}/lib/util"
+{XRegExp} = require 'xregexp'
 
 class LinterWriteGood extends Linter
   # The syntax that the linter handles. May be a string or
@@ -21,6 +22,7 @@ class LinterWriteGood extends Linter
 
   # A regex pattern used to extract information from the executable's output.
   regex:
+    '[^^]*(?<offset>\\^+)[^^]*\n' +
     '(?<message>.+?) on line (?<line>\\d+) at column (?<col>\\d+)\n?'
 
     # '<issue line="(?<line>\\d+)"' +
@@ -28,6 +30,16 @@ class LinterWriteGood extends Linter
     # '.+?reason="\\[((?<error>error)|(?<warning>warn))\\] (?<message>.+?)"'
 
   isNodeExecutable: yes
+
+  processMessage: (message, callback) ->
+    messages = []
+    regex = XRegExp @regex, @regexFlags
+    XRegExp.forEach message, regex, (match, i) =>
+      match.colStart = parseInt(match.col) + 1
+      match.colEnd = match.colStart + match.offset.length - 1
+      messages.push(@createMessage(match))
+    , this
+    callback messages
 
   constructor: (editor) ->
     super(editor)
