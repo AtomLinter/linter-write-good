@@ -36,7 +36,7 @@ class LinterWriteGood extends Linter
     regex = XRegExp @regex, @regexFlags
     XRegExp.forEach message, regex, (match, i) =>
       match.colStart = parseInt(match.col) + 1
-      match.colEnd = match.colStart + match.offset.length - 1
+      match.colEnd = match.colStart + match.offset.length
       messages.push(@createMessage(match))
     , this
     callback messages
