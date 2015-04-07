@@ -8,6 +8,7 @@ class LinterWriteGood extends Linter
   # list/tuple of strings. Names should be all lowercase.
   @syntax: [
     "source.gfm"
+    "gfm.restructuredtext"
     "text.git-commit"
     "text.plain"
     "text.plain.null-grammar"
