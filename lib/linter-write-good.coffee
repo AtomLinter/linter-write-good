@@ -1,3 +1,4 @@
+{CompositeDisposable} = require 'atom'
 linterPath = atom.packages.getLoadedPackage('linter').path
 Linter = require "#{linterPath}/lib/linter"
 findFile = require "#{linterPath}/lib/util"
@@ -44,11 +45,15 @@ class LinterWriteGood extends Linter
 
   constructor: (editor) ->
     super(editor)
+    @disposables = new CompositeDisposable
 
-    atom.config.observe 'linter-write-good.writegoodExecutablePath', (val) =>
-      @executablePath = val
+    @disposables.add atom.config.observe(
+      'linter-write-good.writegoodExecutablePath',
+      (val) =>
+        @executablePath = val
+    )
 
   destroy: ->
-    atom.config.unobserve 'linter-write-good.writegoodExecutablePath'
+    @disposables.dispose()
 
 module.exports = LinterWriteGood
