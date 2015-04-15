@@ -1,3 +1,6 @@
+## 0.4.2 - Updated the short description and README.
+* Made it more descriptive for potential users.
+
 ## 0.4.1 - Improved TeX support
 * Now activates on all known tex types with language-latex.
 

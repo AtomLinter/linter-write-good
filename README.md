@@ -1,9 +1,10 @@
 # linter-write-good
 
+Naive linter for English prose for developers who can't write good and wanna
+learn to do other stuff good too.
 
 A Linter interface for the [write-good](https://github.com/btford/write-good)
-library. It lints english prose for developers who can't write good and wanna
-do other stuff good too.
+library.
 
 This provides a variety of english usage text tips when writing documentation
 and commit messages.
