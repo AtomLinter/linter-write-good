@@ -1,3 +1,6 @@
+## 0.4.1 - Improved TeX support
+* Now activates on all known tex types with language-latex.
+
 ## 0.4.0 - Added LaTeX support
 * Now activates on "text.bibtex" grammar. Requires the [language-latex](https://atom.io/packages/language-latex) plugin.
 
