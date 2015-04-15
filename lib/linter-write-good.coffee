@@ -14,6 +14,7 @@ class LinterWriteGood extends Linter
     "text.plain"
     "text.plain.null-grammar"
     "text.restructuredtext"
+    "text.bibtex"
   ]
 
   # A string, list, tuple or callable that returns a string, list or tuple,
