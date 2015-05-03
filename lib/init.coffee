@@ -1,7 +1,7 @@
 path = require 'path'
 
 module.exports =
-  configDefaults:
+  config:
     writegoodExecutablePath:
       type: 'string'
       default: path.join __dirname, '..', 'node_modules', 'write-good', 'bin'
