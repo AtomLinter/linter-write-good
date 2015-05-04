@@ -1,3 +1,6 @@
+## 0.4.3 - Fixed deprecation warnings.
+* Thanks to @k2b6s9j
+
 ## 0.4.2 - Updated the short description and README.
 * Made it more descriptive for potential users.
 
