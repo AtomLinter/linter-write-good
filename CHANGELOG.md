@@ -1,3 +1,6 @@
+## 0.5.0 - Pass arguments to the underlying write-good library.
+* Thanks to @dragonrider23
+
 ## 0.4.3 - Fixed deprecation warnings.
 * Thanks to @k2b6s9j
 
