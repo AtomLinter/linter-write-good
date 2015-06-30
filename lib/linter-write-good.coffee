@@ -28,6 +28,8 @@ class LinterWriteGood extends Linter
 
   linterName: 'write-good'
 
+  options: ['additionalArgs']
+
   # A regex pattern used to extract information from the executable's output.
   regex:
     '[^^]*(?<offset>\\^+)[^^]*\n' +
@@ -61,5 +63,15 @@ class LinterWriteGood extends Linter
 
   destroy: ->
     @disposables.dispose()
+
+  beforeSpawnProcess: (command, args, options) ->
+      {
+        command,
+        args: args.slice(0, -1).concat(
+          if @additionalArgs then @additionalArgs.split(' ') else []
+          args.slice(-1)
+        )
+        options
+      }
 
 module.exports = LinterWriteGood
