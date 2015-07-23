@@ -1,7 +1,6 @@
 {
   "name": "linter-write-good",
   "main": "./lib/init",
-  "linter-package": true,
   "activationCommands": [],
   "version": "0.5.0",
   "description": "Naive linter for English prose for developers who can't write good and wanna learn to do other stuff good too.",
@@ -11,7 +10,14 @@
     "atom": ">0.50.0"
   },
   "dependencies": {
-    "write-good": "~0.7.0",
+    "write-good": "~0.9.0",
     "xregexp": "~2.0.0"
+  },
+  "providedServices": {
+    "linter": {
+      "versions": {
+        "1.0.0": "provideLinter"
+      }
+    }
   }
 }

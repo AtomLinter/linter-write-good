@@ -16,3 +16,10 @@ This package requires [Linter](https://github.com/AtomLinter/Linter).
 [See it on github.com](https://github.com/gepoch/linter-write-good)
 
 ![](https://raw.github.com/gepoch/linter-write-good/master/screenshot.png)
+
+## Configuration
+
+In the package settings, you can use a custom node binary, a custom write-good
+script, and pass arguments to the write good command. See
+[write-good](https://github.com/btford/write-good) for possible arguments to the
+command.
