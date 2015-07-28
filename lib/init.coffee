@@ -59,7 +59,7 @@ module.exports =
 
       scope: 'file' # or 'project'
 
-      lintOnFly: false # must be false for scope: 'project'
+      lintOnFly: true # must be false for scope: 'project'
 
       lint: (textEditor) =>
         return new Promise (resolve, reject) =>
@@ -76,12 +76,8 @@ module.exports =
               output += data
 
             exit: (code) ->
-              console.log code
-
               messages = []
               regex = XRegExp writeGoodRe, @regexFlags
-
-              console.log output
 
               XRegExp.forEach output, regex, (match, i) ->
                 match.colStart = parseInt(match.col)
@@ -90,10 +86,12 @@ module.exports =
                 messages.push
                   type: 'Error'
                   text: match.message
+                  filePath: filePath
                   range: [
                     [match.lineStart, match.colStart]
                     [match.lineStart, match.colEnd]
                   ]
+
               resolve messages
 
           process.onWillThrowError ({error,handle}) ->
