@@ -2,7 +2,7 @@
   "name": "linter-write-good",
   "main": "./lib/init",
   "activationCommands": [],
-  "version": "0.6.0",
+  "version": "0.6.1",
   "description": "Naive linter for English prose for developers who can't write good and wanna learn to do other stuff good too.",
   "repository": "https://github.com/gepoch/linter-write-good",
   "license": "MIT",
