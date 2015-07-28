@@ -1,3 +1,6 @@
+## 0.6.1 - Bugfix.
+* Fixed [#11](https://github.com/gepoch/linter-write-good/issues/11)
+
 ## 0.6.0 - Updated to the use the new Linter API.
 
 ## 0.5.0 - Pass arguments to the underlying write-good library.
