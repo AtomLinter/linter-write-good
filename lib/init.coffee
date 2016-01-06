@@ -45,6 +45,7 @@ module.exports =
       grammarScopes: [
         "source.gfm"
         "gfm.restructuredtext"
+        "text.md"
         "text.git-commit"
         "text.plain"
         "text.plain.null-grammar"
