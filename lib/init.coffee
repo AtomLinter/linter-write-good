@@ -42,6 +42,8 @@ module.exports =
 
   provideLinter: ->
     provider =
+      name: 'write-good',
+      
       grammarScopes: [
         "source.gfm"
         "gfm.restructuredtext"
