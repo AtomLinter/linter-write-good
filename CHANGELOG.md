@@ -1,3 +1,6 @@
+## 0.7.0 - Added Asciidoc support.
+* Resolves [#17](https://github.com/gepoch/linter-write-good/issues/17)
+
 ## 0.6.1 - Bugfix.
 * Fixed [#11](https://github.com/gepoch/linter-write-good/issues/11)
 
