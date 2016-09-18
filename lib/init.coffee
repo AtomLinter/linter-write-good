@@ -18,6 +18,11 @@ module.exports =
       type: 'string'
       title: 'Path to the node interpreter to use. Defaults to Atom\'s.'
       default: path.join atom.packages.getApmPath(), '..', 'node'
+    severityLevel:
+      type: 'string'
+      title: 'Severity level'
+      default: 'Error'
+      enum: ['Error', 'Warning', 'Info']
 
   activate: ->
     @subscriptions = new CompositeDisposable
@@ -88,7 +93,7 @@ module.exports =
                 match.lineStart = parseInt(match.line) - 1
                 match.colEnd = match.colStart + match.offset.length
                 messages.push
-                  type: 'Error'
+                  type: atom.config.get 'linter-write-good.severityLevel'
                   text: match.message
                   filePath: filePath
                   range: [
