@@ -26,4 +26,4 @@ command.
 
 Moreover, you can set the **severity level** of this linter.
 The default level is **Error**.
-Setting the severity level to **Warning** or **Info** helps distinguish *good-write* highlighting from the highlighting of an ordinary spell checker.
+Setting the severity level to **Warning** or **Info** helps distinguish *write-good* highlighting from the highlighting of an ordinary spell checker.
