@@ -1,3 +1,6 @@
+## 0.8.0 - Added configurable linter level in settings.
+* Thanks to @TimKam
+
 ## 0.7.0 - Added Asciidoc support.
 * Resolves [#17](https://github.com/gepoch/linter-write-good/issues/17)
 

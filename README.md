@@ -24,6 +24,7 @@ script, and pass arguments to the write good command. See
 [write-good](https://github.com/btford/write-good) for possible arguments to the
 command.
 
-Moreover, you can set the **severity level** of this linter.
-The default level is **Error**.
-Setting the severity level to **Warning** or **Info** helps distinguish *write-good* highlighting from the highlighting of an ordinary spell checker.
+Moreover, you can set the **severity level** of this linter. The default level
+is **Error**. Setting the severity level to **Warning** or **Info** helps
+distinguish *write-good* highlighting from the highlighting of an ordinary spell
+checker.
