@@ -27,4 +27,15 @@ command.
 Moreover, you can set the **severity level** of this linter. The default level
 is **Error**. Setting the severity level to **Warning** or **Info** helps
 distinguish *write-good* highlighting from the highlighting of an ordinary spell
-checker.
+checker, or higher priority linters.
+
+### Note: Additional Linting
+
+#### E-Prime
+
+The Write-Good library implements a linter for
+[E-Prime](https://github.com/btford/write-good/issues/70) which is off by
+default. To enable E-Prime linting, you'll need to add the `--yes-eprime` flag
+to the extra arguments input under this package's settings page.
+
+![](https://raw.github.com/gepoch/linter-write-good/master/flags.png)

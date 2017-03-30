@@ -1,3 +1,6 @@
+## 0.9.0 - Upgrade write-good to optionally support E-Prime linting
+* Thanks to @Vorror for creating the origin E-Prime write-good module
+
 ## 0.8.0 - Added configurable linter level in settings.
 * Thanks to @TimKam
 

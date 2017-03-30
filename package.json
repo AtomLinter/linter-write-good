@@ -10,7 +10,7 @@
     "atom": ">0.50.0"
   },
   "dependencies": {
-    "write-good": "~0.9.0",
+    "write-good": "~0.10.0",
     "xregexp": "~2.0.0"
   },
   "providedServices": {
