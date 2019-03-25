@@ -11,7 +11,7 @@
     "atom": ">0.50.0"
   },
   "dependencies": {
-    "write-good": "0.10.3",
+    "write-good": "0.13.1",
     "xregexp": "2.0.0"
   },
   "providedServices": {
