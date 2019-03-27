@@ -12,6 +12,25 @@ jobs:
     - stage: test
       env: ATOM_CHANNEL=beta
 
+    # Check the commit messages
+    - stage: test
+      install:
+        - npm install
+      before_script: skip
+      script:
+        - commitlint-travis
+
+    - stage: release
+      # Since the deploy needs APM, currently the simplest method is to run
+      # build-package.sh, which requires the specs to pass.
+      before_deploy:
+        - export PATH=${PATH}:${HOME}/atom/usr/bin/
+      deploy:
+        provider: script
+        skip_cleanup: true
+        script:
+          - npx semantic-release
+
 ### Generic setup follows ###
 script:
   - curl -s -O https://raw.githubusercontent.com/atom/ci/master/build-package.sh
@@ -44,3 +63,5 @@ addons:
 
 stages:
   - test
+  - name: release
+    if: (NOT type = pull_request) AND branch = master
