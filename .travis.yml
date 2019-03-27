@@ -1,0 +1,46 @@
+### Project specific config ###
+language: node_js
+node_js: lts/*
+install: skip
+os: linux
+
+jobs:
+  include:
+    # Test Atom versions
+    - stage: test
+      env: ATOM_CHANNEL=stable
+    - stage: test
+      env: ATOM_CHANNEL=beta
+
+### Generic setup follows ###
+script:
+  - curl -s -O https://raw.githubusercontent.com/atom/ci/master/build-package.sh
+  - chmod u+x build-package.sh
+  - "./build-package.sh"
+
+notifications:
+  email:
+    on_success: never
+    on_failure: change
+
+branches:
+  only:
+    - master
+
+git:
+  depth: 10
+
+dist: trusty
+
+sudo: false
+
+addons:
+  apt:
+    packages:
+    - build-essential
+    - fakeroot
+    - git
+    - libsecret-1-dev
+
+stages:
+  - test
