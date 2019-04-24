@@ -17,13 +17,32 @@
     "xregexp": "2.0.0"
   },
   "devDependencies": {
-    "jasmine-fix": "1.3.1"
+    "@commitlint/cli": "7.5.2",
+    "@commitlint/config-conventional": "7.5.0",
+    "@commitlint/travis-cli": "7.5.2",
+    "@semantic-release/apm-config": "6.0.1",
+    "husky": "2.0.0",
+    "jasmine-fix": "1.3.1",
+    "semantic-release": "15.13.3"
   },
   "providedServices": {
     "linter": {
       "versions": {
         "2.0.0": "provideLinter"
       }
+    }
+  },
+  "release": {
+    "extends": "@semantic-release/apm-config"
+  },
+  "commitlint": {
+    "extends": [
+      "@commitlint/config-conventional"
+    ]
+  },
+  "husky": {
+    "hooks": {
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
     }
   },
   "renovate": {
