@@ -1,3 +1,10 @@
+## [0.9.2](https://github.com/AtomLinter/linter-write-good/compare/v0.9.1...v0.9.2) (2019-04-24)
+
+
+### Bug Fixes
+
+* **deps:** update dependency write-good to v1 ([6a92b26](https://github.com/AtomLinter/linter-write-good/commit/6a92b26))
+
 ## [0.9.1](https://github.com/AtomLinter/linter-write-good/compare/v0.9.0...v0.9.1) (2019-04-24)
 
 
