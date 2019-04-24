@@ -1,3 +1,12 @@
+## [0.9.1](https://github.com/AtomLinter/linter-write-good/compare/v0.9.0...v0.9.1) (2019-04-24)
+
+
+### Bug Fixes
+
+* **deps:** add package-lock.json ([155bce3](https://github.com/AtomLinter/linter-write-good/commit/155bce3))
+* **deps:** pin dependencies ([46a5ac6](https://github.com/AtomLinter/linter-write-good/commit/46a5ac6))
+* **deps:** update dependency write-good to v0.13.1 ([a74edc1](https://github.com/AtomLinter/linter-write-good/commit/a74edc1))
+
 ## 0.9.0 - Upgrade write-good to optionally support E-Prime linting
 * Thanks to @Vorror for creating the origin E-Prime write-good module
 
