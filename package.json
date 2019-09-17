@@ -1,7 +1,7 @@
 {
   "name": "linter-write-good",
   "main": "./lib/init",
-  "version": "0.9.2",
+  "version": "0.9.3",
   "private": true,
   "description": "Naive linter for English prose for developers who can't write good and wanna learn to do other stuff good too.",
   "repository": {
