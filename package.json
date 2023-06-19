@@ -13,7 +13,7 @@
     "atom": ">=1.9.0 <2.0.0"
   },
   "dependencies": {
-    "write-good": "1.0.2",
+    "write-good": "1.0.8",
     "xregexp": "2.0.0"
   },
   "devDependencies": {
